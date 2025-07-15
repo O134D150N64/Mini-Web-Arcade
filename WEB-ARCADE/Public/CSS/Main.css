@@ -23,6 +23,7 @@ header {
     box-shadow: #000000 0px 3px 5px;
     position: fixed;
     z-index: 100;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
@@ -56,6 +57,24 @@ input[type="password"] {
     padding-left: 20px;
 }
 
+footer {
+    background-color: #070643;
+    color: #FFFFFF;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    overflow: visible;
+    padding-bottom: 100px;
+    height: 110px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: #000000 0px -3px 5px;
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+}
+
 .logo {
     transform: scale(2.5);
     padding-top: 30px;
@@ -71,6 +90,10 @@ input[type="password"] {
 .triangle1 {
     transform: scale(3);
     transform:translateY(-20px);
+}
+
+.triangle2 {
+    transform:translateY(-2px);
 }
 
 .normal {
@@ -99,4 +122,15 @@ input[type="password"] {
     transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
     position: relative;
+}
+
+.P {
+    color: #FFFFFF;
+    font-family: 'Platinum Sign Over';
+    font-size: 15px;
+    text-shadow: #6DD5DC 0px 3px 5px;
+}
+
+.section {
+    padding-left: 50px;
 }
