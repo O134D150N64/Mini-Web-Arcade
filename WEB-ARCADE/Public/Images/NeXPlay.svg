@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.127659574466634 29.317031530994427">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 14px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: PlatinumSignOver, 'Platinum Sign Over';
+      }
+
+      .cls-4 {
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        fill: aqua;
+        opacity: .5;
+        stroke: aqua;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(17.061198977927233 15.74072265625)"><tspan class="cls-4" x="0" y="0">NE</tspan><tspan class="cls-1" x="20.431640625" y="0">X</tspan><tspan class="cls-4" x="33.5224609375" y="0">PLAY</tspan></text>
+  <text class="cls-2" transform="translate(17.061738340357806 14.6767578125)"><tspan class="cls-4" x="0" y="0">NE</tspan><tspan class="cls-1" x="20.431640625" y="0">X</tspan><tspan class="cls-4" x="33.5224609375" y="0">PLAY</tspan></text>
+</svg>
