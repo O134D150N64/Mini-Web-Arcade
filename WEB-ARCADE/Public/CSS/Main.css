@@ -125,14 +125,14 @@ margin-top: auto;
 .play-button:hover {
     transform: scale(1.3);
     transition: transform 0.3s ease-in-out;
-    background-color:#DBDB45;
+    background-color:#6DD5DC;
     position: relative;
 }
 
 .play-button:focus {
     transform: scale(1.3);
     transition: transform 0.3s ease-in-out;
-    background-color:#DBDB45;
+    background-color:#6DD5DC;
     position: relative;
 }
 
