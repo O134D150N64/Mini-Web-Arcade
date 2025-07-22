@@ -1,53 +1,45 @@
-document.getElementById('signup-form').addEventListener('signup-button', function(e) {
 
-    e.preventDefault();
 
-    const email = document.getElementById('signup-email').value;
-    const username = document.getElementById('signup-username').value;
-    const password = document.getElementById('signup-password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
+document.addEventListener('DOMContentLoaded', function() {
 
-    if (password !== confirmPassword) {
+    // Signup functionality
+    // This will be triggered when the signup button is clicked
+    document.getElementById('signup-form').addEventListener('signup-button', function(e) {
+
+        // Prevent the default form submission
+        e.preventDefault();
+    
+        // Get the values from the form fields
+        const email = document.getElementById('signup-email').value;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+    
+        // Validate the form fields
+        if (password !== confirmPassword) {
         
-        alert('Passwords do not match!');
-        return;
-    }
+            alert('Passwords do not match!');
+            return;
+        }
 
-    const users = JSON.parse(localStorage.getItem('users') || '{}');
+        // Check if the username or email already exists
+        const users = JSON.parse(localStorage.getItem('users') || '{}');
 
-    if (users[username]) {
+        if (users[username]) {
         
-        alert('Username already exists!');
-        return;
-    }
-    else if(users[email]) {
+            alert('Username already exists!');
+            return;
+        }
+        else if(users[email]) {
         
-        alert('Email already exists!');
-        return;
-    } 
-    else {
+            alert('Email already exists!');
+            return;
+        } 
+        else {
         
-        users[username] = password;
-        localStorage.setItem('users', JSON.stringify(users));
-        alert('Signup successful!');
-    }
-});
-
-document.getElementById('login-form').addEventListener('login-button', function(e) {
-
-    e.preventDefault();
-
-    const username = document.getElementById('login-username').value;
-    const password = document.getElementById('login-password').value;
-
-    const users = JSON.parse(localStorage.getItem('users') || '{}');
-
-    if (users[username] && users[username] === password) {
-        
-        localStorage.setItem('loggedInUser', username);
-        alert('Login successful!');
-    } else {
-        
-        alert('Invalid username or password!');
-    }
+            users[username] = password;
+            localStorage.setItem('users', JSON.stringify(users));
+            alert('Signup successful!');
+        }
+    });
 });

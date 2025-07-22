@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./CSS/Main.css">
-        <script src="../server.js" defer></script>
         <title>Login Page</title>
     </head>
     <body>
@@ -25,12 +24,12 @@
 
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="text"  placeholder="Username:" id="login-username" name="username" required>
+                        <input type="text"  placeholder="Username:" id="username" name="username" required>
                         <br>
                         <br>
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="password" placeholder="Password:" id="login-password" name="password" required>
+                        <input type="password" placeholder="Password:" id="password" name="password" required>
                         <br>
                         <br>
                         <br>
@@ -76,4 +75,30 @@
             </div>
         </footer>
     </body>
+    <script>
+        
+        // Login functionality
+        // This will be triggered when the login button is clicked
+        document.getElementById('login-form').addEventListener('login-button', function(e) {
+    
+        // Prevent the default form submission
+        e.preventDefault();
+
+        // Get the values from the form fields
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Validate the form fields
+        const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+        if (users[username] && users[username] === password) {
+        
+            localStorage.setItem('loggedInUser', username);
+            alert('Login successful!');
+        } else {
+            
+            alert('Invalid username or password!');
+        }
+    });
+    </script>
 </html>
