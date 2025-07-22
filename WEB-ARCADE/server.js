@@ -36,10 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         } 
         else {
-        
+            
+            console.log('Signup successful for:', username);
             users[username] = password;
             localStorage.setItem('users', JSON.stringify(users));
             alert('Signup successful!');
+            setTimeout(() => {
+                window.location.href = './login.html', 1000; // Redirect to the login page
+            })
         }
     });
 });
