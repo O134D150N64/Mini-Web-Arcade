@@ -8,20 +8,25 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     const confirmPassword = document.getElementById('confirm-password').value;
 
     if (password !== confirmPassword) {
+        
         alert('Passwords do not match!');
         return;
     }
 
     const users = JSON.parse(localStorage.getItem('users') || '{}');
+
     if (users[username]) {
+        
         alert('Username already exists!');
         return;
     }
     else if(users[email]) {
+        
         alert('Email already exists!');
         return;
     } 
     else {
+        
         users[username] = password;
         localStorage.setItem('users', JSON.stringify(users));
         alert('Signup successful!');
@@ -36,9 +41,13 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
     const password = document.getElementById('login-password').value;
 
     const users = JSON.parse(localStorage.getItem('users') || '{}');
+
     if (users[username] && users[username] === password) {
+        
+        localStorage.setItem('loggedInUser', username);
         alert('Login successful!');
     } else {
+        
         alert('Invalid username or password!');
     }
 });
