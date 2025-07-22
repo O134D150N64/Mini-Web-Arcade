@@ -1,4 +1,4 @@
-document.getElementById('signup-form').addEventListener('submit', function(e) {
+document.getElementById('signup-form').addEventListener('signup-button', function(e) {
 
     e.preventDefault();
 
@@ -33,7 +33,7 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     }
 });
 
-document.getElementById('login-form').addEventListener('submit', function(e) {
+document.getElementById('login-form').addEventListener('login-button', function(e) {
 
     e.preventDefault();
 
