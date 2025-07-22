@@ -248,3 +248,8 @@ font-family: 'Microsoft YaHei';
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
+
+@font-face {
+    font-family: 'Platinum Sign Over';
+    src: url('../Fonts/Platinum Sign Over.ttf') format('truetype');
+}
