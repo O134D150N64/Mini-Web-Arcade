@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('users', JSON.stringify(users));
             alert('Signup successful!');
             setTimeout(() => {
-                window.location.href = './login.html', 1000; // Redirect to the login page
+                window.location.href = './login.html', 3000; // Redirect to the login page
             })
         }
     });
