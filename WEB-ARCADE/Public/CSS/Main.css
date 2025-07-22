@@ -85,11 +85,12 @@ input[type="checkbox"]:checked {
 }
 
 a {
-    text-decoration: none; 
+    text-decoration: underline; 
 }
 
 a:hover {
     color: #6DD5DC;
+    text-decoration: none;
     transition: color 0.3s ease-in-out;
     cursor: pointer;
 }
