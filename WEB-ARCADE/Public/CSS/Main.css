@@ -202,3 +202,49 @@ font-family: 'Microsoft YaHei';
     font-family: 'Microsoft YaHei';
     font-size: 20px;
 }
+
+.game-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #242C2C;
+    border-radius: 20px;
+    box-shadow: #000000 0px 3px 5px;
+}
+
+.game-option {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    border: none;
+    background-color: #070643;
+    border-radius: 10px;
+    box-shadow: #6DD5DC 0px 3px 5px;
+}
+
+.game-option img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.game-option h4 {
+    color: #FFFFFF;
+    font-family: 'Platinum Sign Over';
+    font-size: 20px;
+    text-shadow: #6DD5DC 0px 3px 5px;
+    text-align: left;
+}
+
+.game-option:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
