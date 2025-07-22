@@ -1,10 +1,8 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
 
     // Signup functionality
-    // This will be triggered when the signup button is clicked
-    document.getElementById('signup-form').addEventListener('signup-button', function(e) {
+    // This will be triggered when the signup form is submitted
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
 
         // Prevent the default form submission
         e.preventDefault();
@@ -14,36 +12,49 @@ document.addEventListener('DOMContentLoaded', function() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
+        const termsAccepted = document.getElementById('terms').checked;
+
+        // Basic validation
+        if (!email || !username || !password || !confirmPassword) {
+            alert('Please fill in all fields!');
+            return;
+        }
+
+        if (!termsAccepted) {
+            alert('Please accept the terms and conditions!');
+            return;
+        }
     
         // Validate the form fields
         if (password !== confirmPassword) {
-        
             alert('Passwords do not match!');
             return;
         }
 
         // Check if the username or email already exists
         const users = JSON.parse(localStorage.getItem('users') || '{}');
+        const emails = JSON.parse(localStorage.getItem('emails') || '{}');
 
         if (users[username]) {
-        
             alert('Username already exists!');
             return;
         }
-        else if(users[email]) {
         
+        if (emails[email]) {
             alert('Email already exists!');
             return;
-        } 
-        else {
-            
-            console.log('Signup successful for:', username);
-            users[username] = password;
-            localStorage.setItem('users', JSON.stringify(users));
-            alert('Signup successful!');
-            setTimeout(() => {
-                window.location.href = './login.html', 3000; // Redirect to the login page
-            })
         }
+
+        // Store user data
+        console.log('Signup successful for:', username);
+        users[username] = password;
+        emails[email] = username; // Store email mapping
+        localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem('emails', JSON.stringify(emails));
+        
+        alert('Signup successful!');
+        setTimeout(() => {
+            window.location.href = './login.html'; // Redirect to the login page
+        }, 1000); // Redirect after 1 second
     });
 });
