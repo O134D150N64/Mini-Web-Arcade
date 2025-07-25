@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong-champ</title>
+    <link rel="stylesheet" href="./Pong-Champ.css">
+    <script src="./Pong-Champ.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="../../index.html"><img src="../../Images/NeXPlay.svg" alt="NeXPlay" width="200" height="100" class="logo"></a>
+    </header>
+    <main>
+        <div class="game-container">
+        <h1>PONG-CHAMP</h1>
+        <div class="score">
+            <span class="player-score">PLAYER - <span id="playerScore">0</span></span>
+            <span class="ai-score">AI - <span id="aiScore">0</span></span>
+        </div>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div class="controls">
+            Use W/S or Arrow Keys to move your paddle
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button onclick="window.history.back(-1)" class="back-button"> GO BACK</button>
+       
+        <div class="start-screen" id="startScreen">
+            <h2>PONG-CHAMP</h2>
+            <p>Get ready for the ultimate pong battle!<br>First to 50 points wins.</p>
+            <button class="start-btn" onclick="startGame()">START GAME</button>
+        </div>
+        
+        <div class="game-over" id="gameOver">
+            <h2 id="gameOverText">GAME OVER!</h2>
+            <p id="finalScore"></p>
+            <button class="restart-btn" onclick="restartGame()">PLAY AGAIN</button>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <h5>&copy; 2025 NeXPlay Group. All rights reserved.</h5>
+    </footer>
+</body>
+</html>

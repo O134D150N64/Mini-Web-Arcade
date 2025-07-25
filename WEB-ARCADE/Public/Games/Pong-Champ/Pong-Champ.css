@@ -1,0 +1,238 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @font-face {
+            font-family: 'Platinum Sign Over';
+            src: url('../../Fonts/Platinum Sign Over.ttf') format('truetype');
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        body {
+            background-image: linear-gradient(to bottom, #000000, #4643A3);
+            background-size: cover;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background-color: #070643;
+            box-shadow: #000000 0px 3px 5px;
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        main {
+            padding-top: 70px;
+            flex: 1;
+            margin-top: 70px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 180px);
+        }
+        
+        footer {
+            background-color: #070643;
+            color: #FFFFFF;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            height: 110px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: #000000 0px -3px 5px;
+            z-index: 100;
+            margin-top: auto;
+            font-family: 'Microsoft YaHei';
+        }
+        
+        .logo {
+            transform: scale(2.5);
+            padding-top: 30px;
+            outline: none;
+        }
+        
+        .game-container {
+            text-align: center;
+            background-color: #242C2C;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: #000000 0px 3px 5px;
+            color: #6DD5DC;
+            font-family: 'Microsoft YaHei';
+        }
+        
+        h1 {
+            color: #FFFFFF;
+            font-family: 'Platinum Sign Over';
+            font-size: 50px;
+            text-shadow: #6DD5DC 0px 3px 5px;
+            margin-bottom: 20px;
+        }
+        
+        canvas {
+            border: 3px solid #6DD5DC;
+            border-radius: 10px;
+            background: #000;
+            box-shadow: #6DD5DC 0px 3px 5px;
+        }
+        
+        .score {
+            font-size: 2rem;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            font-family: 'Platinum Sign Over';
+        }
+        
+        .player-score {
+            color: #00ff00;
+            text-shadow: #6DD5DC 0px 3px 5px;
+        }
+        
+        .ai-score {
+            color: #ff0066;
+            text-shadow: #6DD5DC 0px 3px 5px;
+        }
+        
+        .controls {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #6DD5DC;
+            font-family: 'Microsoft YaHei';
+        }
+        
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #242C2C;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: #000000 0px 3px 5px;
+            text-align: center;
+            display: none;
+            color: #6DD5DC;
+            font-family: 'Microsoft YaHei';
+            font-size: 20px;
+        }
+        
+        .game-over h2 {
+            color: #FFFFFF;
+            font-family: 'Platinum Sign Over';
+            font-size: 40px;
+            text-shadow: #6DD5DC 0px 3px 5px;
+            margin-bottom: 20px;
+        }
+        
+        .restart-btn {
+            width: 200px;
+            height: 50px;
+            font-family: 'Platinum Sign Over';
+            font-size: 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            box-shadow: #6DD5DC 0px 3px 5px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        .restart-btn:hover {
+            transform: scale(1.3);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+        
+        .start-screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            background-color: #242C2C;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: #000000 0px 3px 5px;
+            text-align: center;
+            color: #6DD5DC;
+            font-family: 'Microsoft YaHei';
+            font-size: 20px;
+        }
+        
+        .start-screen h2 {
+            color: #FFFFFF;
+            font-family: 'Platinum Sign Over';
+            font-size: 40px;
+            text-shadow: #6DD5DC 0px 3px 5px;
+            margin-bottom: 20px;
+        }
+        
+        .start-btn {
+            width: 200px;
+            height: 50px;
+            font-family: 'Platinum Sign Over';
+            font-size: 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            box-shadow: #6DD5DC 0px 3px 5px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        .start-btn:hover {
+            transform: scale(1.3);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+        
+        .start-btn:focus {
+            transform: scale(1.3);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .back-button {
+            width: 200px;
+            height: 50px;
+            font-family: 'Platinum Sign Over';
+            font-size: 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            box-shadow: #6DD5DC 0px 3px 5px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .back-button:hover {
+            transform: scale(1.3);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
