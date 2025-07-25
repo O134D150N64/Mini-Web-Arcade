@@ -156,13 +156,13 @@ const canvas = document.getElementById('gameCanvas');
                 aiScore++;
                 pauseAndResetBall();
                 if (aiScore >= winningScore) {
-                    endGame('AI Wins!');
+                    endGame('AI WINS!');
                 }
             } else if (ball.x > canvas.width) {
                 playerScore++;
                 pauseAndResetBall();
                 if (playerScore >= winningScore) {
-                    endGame('You Win!');
+                    endGame('YOU WIN!');
                 }
             }
             
