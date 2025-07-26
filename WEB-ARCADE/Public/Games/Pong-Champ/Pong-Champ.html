@@ -16,16 +16,17 @@
         <h1>PONG-CHAMP</h1>
         <div class="score">
             <span class="player-score">PLAYER - <span id="playerScore">0</span></span>
-            <span class="ai-score">AI - <span id="aiScore">0</span></span>
+            <span class="ai-score"><span id="aiScore">0</span> - AI</span>
         </div>
         <canvas id="gameCanvas" width="800" height="400"></canvas>
         <div class="controls">
             Use W/S or Arrow Keys to move your paddle
         </div>
+        <button class="pause-button" id="pauseButton" onclick="togglePause()" style="display: none;">PAUSE</button>
        
         <div class="start-screen" id="startScreen">
             <h2>PONG-CHAMP</h2>
-            <p>Get ready for the ultimate pong battle!<br>First to 50 points wins.</p>
+            <p>Get ready for the ultimate pong battle!<br>First to 25 points wins.</p>
             <button class="start-btn" onclick="startGame()">START GAME</button>
         </div>
         
@@ -34,7 +35,21 @@
             <p id="finalScore"></p>
             <button class="restart-btn" onclick="restartGame()">PLAY AGAIN</button>
         </div>
+
+        <div class="pause-menu" id="pauseMenu">
+            <h2>GAME PAUSED!</h2>
+            <div class="pause-menu-buttons">
+                <button class="pause-menu-btn" onclick="resumeGame()">RESUME</button>
+                <button class="pause-menu-btn" onclick="restartGameFromPause()">RESTART</button>
+                <button class="pause-menu-btn" onclick="quitGame()">QUIT GAME!</button>
+            </div>
+        </div>
     </div>
+    <br>
+    <br>
+    <button class="back-btn"  id="backButton" onclick="goBack()">GO BACK</button>
+    <br>
+    <br>
     </main>
     <footer>
         <h5>&copy; 2025 NeXPlay Group. All rights reserved.</h5>
