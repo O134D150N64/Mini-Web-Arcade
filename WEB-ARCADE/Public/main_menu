@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Main Menu</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* Mini user info box */
+    .user-info {
+      display: flex;
+      align-items: center;
+      background-color: #444;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    .user-info img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    /* Container for flexboxes */
+    .flex-container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .flex-box {
+      background: white;
+      flex: 1; /* equal width */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    /* Contact section */
+    .contact-section {
+      max-width: 600px;
+      background: white;
+      padding: 20px 30px;
+      margin: 20px auto 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      font-size: 1rem;
+    }
+
+    .contact-section h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .contact-item {
+      margin-bottom: 10px;
+    }
+
+    .contact-label {
+      font-weight: bold;
+      display: inline-block;
+      width: 100px;
+      color: #555;
+    }
+
+    /* Responsive: stack flex boxes on smaller screens */
+    @media (max-width: 768px) {
+      .flex-container {
+        flex-direction: column;
+      }
+      .flex-box {
+        margin-bottom: 20px;
+      }
+      .flex-box:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="site-name">NeXplay</div>
+  <div class="user-info">
+    <img src="https://imgs.search.brave.com/81QxeWbLGrhEHgsIajq4DoDXB44Y_p3qxQQ7wfBWknY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvNS9Qcm9m/aWxlLVBORy1JbWFn/ZS5wbmc" alt="User Avatar" />
+    <span>Login</span>
+  </div>
+</header>
+
+<div class="flex-container">
+  <div class="flex-box">
+    <h2>Flexbox 1</h2>
+  </div>
+  <div class="flex-box">
+    <h2>Flexbox 2</h2>
+  </div>
+</div>
+
+<section class="contact-section" aria-label="Contact Information">
+  <h2>Contact Us</h2>
+  <div class="contact-item">
+    <span class="contact-label">Phone:</span>
+    <a href="tel:+1234567890">+1 (234) 567-890</a>
+  </div>
+  <div class="contact-item">
+    <span class="contact-label">Email:</span>
+    <a href="mailto:support@nexplay.com">support@nexplay.com</a>
+  </div>
+</section>
+
+</body>
+</html>
