@@ -14,6 +14,7 @@ html, body {
     position: relative;
 }
 
+/* Pop-up confirmation message to ensure that e-mail has been sent successfully to user */
 .confirm {
     z-index:30;
     width:100; height:100;
@@ -33,6 +34,7 @@ html, body {
     font-size:1.5em;
 }
 
+/* Pseudo-classes for the back button */
 .back[type="image"] {
     position:absolute;
     z-index:40;
