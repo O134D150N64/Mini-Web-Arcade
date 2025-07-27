@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" onkeypress="jump()"> <!--Sets onclick to perform jump() function when clicked anywhere on the HTML screen-->
+    <!--Start of header-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Arcade Game 1 - Jumping Block Game</title> <!--Page title-->
+        <link rel="stylesheet" href="./game_pause.css"> <!--Link blockjump game to css file-->
+    </head>
+
+    <!--Start of body-->
+    <body>
+        <br><br>
+        <h2>Jumping Block Game</h2> <!--Header title of the game: Jumping Block Game-->
+        <br>
+        <div class="game">
+            <div id="character"></div> <!--First div: character-->
+            <div id="block"></div> <!--Second div: block-->
+        </div>
+        <p style="color:black; font-size:1.5em"><br>Score: <span id="scoreSpan">0</span></p><br><br>
+        <input class="button" type="image" src="../../Images/pause-button.png" accesskey="p" onclick="window.location.href='./block_jump (game 1).html'">
+        <p id="pause_btn">GAME HAS BEEN PAUSED !<br> <span id="pause_btn-2">Counter will now reset...</span></p>
+        <div class="container">
+            <footer>
+                <input type='image' src="../../Images/back_button.png" accesskey="m" onclick="window.location.href='../../index.html'; alert('Returning you to the main menu...')">
+                <p style="padding-top:5px; font-size:1em;">Press "SPACEBAR" or any KEY at the right time to jump</p><br>
+                <p style="font-size:1em;">Click "Alt + M" to return to main menu</p><br>
+                <p style="font-size:1em;">The game is paused. Click "Alt + P" to resume.</p><br>
+                <p class="copyright">&copy; 2025 NeXPlay Group. All rights reserved.</p>
+            </footer>
+        </div>
+    </body>
+</html>

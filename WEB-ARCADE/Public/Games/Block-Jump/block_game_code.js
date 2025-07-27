@@ -1,7 +1,7 @@
 // Initialize variables from their corresponding id matches
-var character = document.getElementById("character");
-var block = document.getElementById("block");
-var counter = 0;
+let character = document.getElementById("character");
+let block = document.getElementById("block");
+let counter = 0;
 
 // Begin function to animate jumping
 function jump() {
