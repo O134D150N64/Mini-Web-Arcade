@@ -1,12 +1,10 @@
+// Signup functionality
 document.addEventListener('DOMContentLoaded', function() {
-
-    // Signup functionality
     // This will be triggered when the signup form is submitted
     document.getElementById('signup-form').addEventListener('submit', function(e) {
-
         // Prevent the default form submission
         e.preventDefault();
-    
+        
         // Get the values from the form fields
         const email = document.getElementById('signup-email').value;
         const username = document.getElementById('username').value;
@@ -24,10 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Please accept the terms and conditions!');
             return;
         }
-    
+        
         // Validate the form fields
+        // Validate if password is matched with its confirmed password
         if (password !== confirmPassword) {
             alert('Passwords do not match!');
+            return;
+        }
+
+        // Validate if password created is between 8 to 24 characters
+        if (password.length < 8 || password.length > 24) {
+            alert('Passwords have to be between 8 to 24 characters in length.');
+            e.preventDefault();
             return;
         }
 
@@ -39,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Username already exists!');
             return;
         }
-        
+            
         if (emails[email]) {
             alert('Email already exists!');
             return;
@@ -51,10 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
         emails[email] = username; // Store email mapping
         localStorage.setItem('users', JSON.stringify(users));
         localStorage.setItem('emails', JSON.stringify(emails));
-        
-        alert('Signup successful!');
+        alert('Sign up successful!');
         setTimeout(() => {
             window.location.href = './login.html'; // Redirect to the login page
         }, 1000); // Redirect after 1 second
     });
-});
+});        

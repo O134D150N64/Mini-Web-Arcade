@@ -30,42 +30,21 @@ footer {
 }
 
 input[type=image] {
-    padding:9px;
+    padding:5px;
     height:40px; width:auto;
     position:absolute;
-    top:35%;
+    top:52%;
     left:4%;
     font-weight:bold;
 }
 
 input[type=image]:hover {
-    transform:scale(1.2);
+    transform:scale(1.3);
     background-color:#DBDB45;
-    border-radius:1px;
+    border-radius:3px;
 }
 
 input[type=image]:focus {
-    transform:scale(1.2);
-    background-color:#DBDB45;
-    border-radius:1px;
-}
-
-.button[type="image"] {
-    padding:5px;
-    height:40px; width:auto;
-    position:absolute;
-    top:64%;
-    left:78%;
-    font-weight:bold;
-}
-
-.button[type="image"]:hover {
-    transform:scale(1.3);
-    background-color:#DBDB45;
-    border-radius:7px;
-}
-
-.button[type="image"]:focus {
     transform:scale(1.3);
     background-color:#DBDB45;
     border-radius:3px;
@@ -89,6 +68,16 @@ p {
     text-align:center;
 }
 
+#pause_btn {
+    font-size:4em;
+    position:absolute;
+    top:24%;
+}
+
+#pause_btn-2 {
+    font-size:30px;
+}
+
 #scoreSpan {
     color:yellow;
     font-size:1.15em;
@@ -109,42 +98,32 @@ p {
     top: 150px;
 }
 
-.animate {
-    animation: jump 0.3s linear;
-}
-
-@keyframes jump {
-    0% {
-        top: 150px;
-    }
-
-    30% {
-        top: 100px;
-    }
-
-    70% {
-        top: 100px;
-    }
-    100% {
-        top: 150px;
-    }
-}
-
 #block {
     background-color: blue;
     width: 20px;
     height: 20px;
     position: relative;
-    top: 130px;
-    left: 500px;
-    animation: block 1s infinite linear;
+    top:65%;
+    left:96%;
 }
 
-@keyframes block {
-    0% {
-        left: 500px
-    }
-    100% {
-        left: -20px
-    }
+.button[type="image"] {
+    padding:5px;
+    height:40px; width:auto;
+    position:absolute;
+    top:64%;
+    left:78%;
+    font-weight:bold;
+}
+
+.button[type="image"]:hover {
+    transform:scale(1.3);
+    background-color:#DBDB45;
+    border-radius:7px;
+}
+
+.button[type="image"]:focus {
+    transform:scale(1.3);
+    background-color:#DBDB45;
+    border-radius:3px;
 }

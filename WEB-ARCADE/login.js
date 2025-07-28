@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = './index.html'; // Redirect to the home page
             }, 1000); // Redirect after 1 second
         } else {
-                
             alert('Invalid username or password!');
         }
     });
