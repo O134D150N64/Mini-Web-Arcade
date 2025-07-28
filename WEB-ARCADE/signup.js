@@ -24,8 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Validate the form fields
+        // Validate if password is matched with its confirmed password
         if (password !== confirmPassword) {
             alert('Passwords do not match!');
+            return;
+        }
+
+        // Validate if password created is between 8 to 24 characters
+        if (password.length < 8 || password.length > 24) {
+            alert('Passwords have to be between 8 to 24 characters in length.');
+            e.preventDefault();
             return;
         }
 

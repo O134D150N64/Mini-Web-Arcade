@@ -27,25 +27,5 @@
                 <p class="copyright">&copy; 2025 NeXPlay Group. All rights reserved.</p>
             </footer>
         </div>
-        <script>
-            // Audio setup
-            let backgroundMusic = null;
-
-            // Initialize audio 
-            function initAudio() {
-                document.getElementById("music");
-                backgroundMusic = new Audio();
-                backgroundMusic.src = '../../Music/Pong-Champ.mp3';
-                backgroundMusic.loop = true;
-                backgroundMusic.volume = 0.5; // Adjust volume as needed
-            }
-
-            document.addeventListener('click', initAudio(), false);
-
-            // Start background music
-            if (backgroundMusic) {
-                backgroundMusic.play().catch(e => console.log('Audio play failed:', e));
-            }
-        </script>
     </body>
 </html>

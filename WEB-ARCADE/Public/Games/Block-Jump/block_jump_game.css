@@ -30,24 +30,24 @@ footer {
 }
 
 input[type=image] {
-    padding:5px;
+    padding:9px;
     height:40px; width:auto;
     position:absolute;
-    top:52%;
+    top:35%;
     left:4%;
     font-weight:bold;
 }
 
 input[type=image]:hover {
-    transform:scale(1.3);
+    transform:scale(1.2);
     background-color:#DBDB45;
-    border-radius:3px;
+    border-radius:1px;
 }
 
 input[type=image]:focus {
-    transform:scale(1.3);
+    transform:scale(1.2);
     background-color:#DBDB45;
-    border-radius:3px;
+    border-radius:1px;
 }
 
 .button[type="image"] {
@@ -139,11 +139,11 @@ p {
     left: 500px;
     animation: block 1s infinite linear;
 }
+
 @keyframes block {
     0% {
         left: 500px
     }
-
     100% {
         left: -20px
     }

@@ -3,73 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Sudoku</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-    }
-
-    h2 {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    table {
-      margin: 20px auto;
-      border-collapse: collapse;
-    }
-
-    td {
-      width: 50px;
-      height: 50px;
-      border: 1px solid #666;
-      text-align: center;
-      vertical-align: middle;
-      padding: 0;
-    }
-
-    /* Add thicker borders for 2x2 subgrids */
-    tr:nth-child(2) td {
-      border-bottom: 2px solid #000;
-    }
-    td:nth-child(2) {
-      border-right: 2px solid #000;
-    }
-
-    input {
-      width: 100%;
-      height: 100%;
-      font-size: 18px;
-      text-align: center;
-      border: none;
-      background-color: #fff;
-    }
-
-    .prefilled {
-      background-color: #e6e6e6;
-      font-weight: bold;
-      font-size: 18px;
-      color: #333;
-    }
-
-    button {
-      display: block;
-      margin: 15px auto;
-      padding: 8px 16px;
-      font-size: 15px;
-      cursor: pointer;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-
-    #message {
-      text-align: center;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="./Sudoku.css">
 </head>
 <body>
 
@@ -80,7 +14,12 @@
 <button onclick="checkSolution()">Check</button>
 
 <div id="message"></div>
-
+<footer>
+  <input type='image' src="../../Images/back_button.png" accesskey="m" onclick="window.location.href='../../index.html'; alert('Returning you to the main menu...')">
+  <p class='foot-style2'>Sudoku! Match the numbers (1-4) ensuring that each number<br>only appears once per row and column !</p><br>
+  <p class='foot-style'>Click "Alt + M" to return to main menu</p><br>
+  <p class="copyright">&copy; 2025 NeXPlay Group. All rights reserved.</p>
+</footer>
 <script>
   // Pre-filled Sudoku puzzle (0 = empty)
   const board = [
@@ -147,6 +86,5 @@
 
   renderBoard();
 </script>
-
 </body>
 </html>

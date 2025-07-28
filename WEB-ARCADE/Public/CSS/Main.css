@@ -227,8 +227,9 @@ footer {
 }
 
 .team-content img {
-    width: 100px;
-    height: 100px;
+    margin-top: 15px;
+    width: 120px;
+    height: 124px;
     border-radius: 50%;
     box-shadow: #000000 0px 3px 5px;
 }
