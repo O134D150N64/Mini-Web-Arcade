@@ -356,6 +356,60 @@ footer {
     text-shadow: #6DD5DC 0px 3px 5px;
 }
 
+.contact-us {
+    color: #FFFFFF;
+    font-family: 'Platinum Sign Over';
+    font-size: 15px;
+    text-shadow: #6DD5DC 0px 3px 5px;
+    position:absolute;
+    top:8%;
+    left:75%;
+}
+
+.contact-us:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-us a {
+    text-decoration: none;
+    color: #6DD5DC;
+}
+
+.contact-us a:hover {
+    color: #6DD5DC;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-us2 {
+    color: #FFFFFF;
+    font-family: 'Platinum Sign Over';
+    font-size: 15px;
+    text-shadow: #6DD5DC 0px 3px 5px;
+    position:absolute;
+    top:12%;
+    left:75%;
+}
+
+.contact-us2:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-us2 a {
+    text-decoration: none;
+    color: #6DD5DC;
+}
+
+.contact-us2 a:hover {
+    color: #6DD5DC;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
 .content {
     padding: 30px;
     width: 550px;
